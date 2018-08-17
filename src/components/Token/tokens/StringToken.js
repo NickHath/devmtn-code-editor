@@ -13,7 +13,7 @@ export default class StringToken extends Token {
   render() {
     const { defaultValue, locked, expected } = this.props;
     const { display } = this.state;
-    const boxStyle = ({ width: expected && `${expected.length}em` });
+    const boxStyle = ({ width: expected && `${expected.length}em`, borderColor: `#A6E22E` });
     return (
       // we have to bind the parent's function to our "this" context
       // there might be an easier way to do this with .bind (if the method

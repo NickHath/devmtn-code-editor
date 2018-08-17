@@ -12,7 +12,7 @@ export default class VarKeywordToken extends Token {
   render() {
     const { locked, defaultValue, expected } = this.props;
     const { display } = this.state;
-    const boxStyle = ({ width: expected && `${expected.length}em` });
+    const boxStyle = ({ width: expected && `${expected.length}em`, borderColor: `#FD5FF1` });
     return (
       <div className='token var-keyword' onClick={ () => this.handleClick.call(this, locked) }>
         { display || defaultValue || <div className='input-box' style={ boxStyle }/> }

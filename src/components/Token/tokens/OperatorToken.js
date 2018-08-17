@@ -16,9 +16,9 @@ export default class StringToken extends Token {
   render() {
     const { defaultValue, locked, expected } = this.props;
     const { display } = this.state;
-    const boxStyle = ({ width: expected && `${expected.length}em` });
+    const boxStyle = ({ width: expected && `${expected.length}em`, borderColor: `#E6DB74` });
     return (
-      <div className='token string' onClick={ () => this.handleClick.call(this, locked) }>
+      <div className='token operator' onClick={ () => this.handleClick.call(this, locked) }>
         { display || defaultValue || <div className='input-box' style={ boxStyle }/> }
       </div>
     );
