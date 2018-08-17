@@ -18,5 +18,15 @@
 }
 /* the token class will style input in a standard way */
 .token {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+.input-box {
+  display: inline-block;
+  height: 1em;
+  width: 6em;
   border: 1px solid white;
+}
+.input-box:hover {
+  cursor: pointer;
 }

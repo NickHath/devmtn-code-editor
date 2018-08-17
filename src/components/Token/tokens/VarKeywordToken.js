@@ -14,10 +14,7 @@ export default class VarKeywordToken extends Token {
     const { display } = this.state;
     return (
       <div className='token var-keyword' onClick={ () => this.handleClick.call(this, locked) }>
-        Var Keyword Token
-        <p>defaultValue: { defaultValue }</p>
-        <p>locked: { JSON.stringify(locked) }</p>
-        <p>I will display: <span style={{ color: 'red' }}>{ display || defaultValue || 'Nothing' }</span></p>
+        { display || defaultValue || <div className='input-box' /> }
       </div>
     );
   }

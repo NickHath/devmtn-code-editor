@@ -18,10 +18,7 @@ export default class StringToken extends Token {
     const { display } = this.state;
     return (
       <div className='token string' onClick={ () => this.handleClick.call(this, locked) }>
-        Operator Token
-        <p>defaultValue: { defaultValue }</p>
-        <p>locked: { JSON.stringify(locked) }</p>
-        <p>I will display: <span style={{ color: 'red' }}>{ display || defaultValue || 'Nothing' }</span></p>
+        { display || defaultValue || <div className='input-box' /> }
       </div>
     );
   }
