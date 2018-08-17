@@ -1,0 +1,22 @@
+.app {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+.button {
+  padding: 1em;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  width: 150px;
+  height: 50px;
+  border-radius: 3px;
+  text-align: center;
+}
+.link:hover {
+  cursor: pointer;
+}
+.link:visited, .link {
+  color: white;
+  text-decoration: none;
+}
