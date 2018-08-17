@@ -11,14 +11,15 @@ export default class StringToken extends Token {
   }
 
   render() {
-    const { defaultValue, locked } = this.props;
+    const { defaultValue, locked, expected } = this.props;
     const { display } = this.state;
+    const boxStyle = ({ width: expected && `${expected.length}em` });
     return (
       // we have to bind the parent's function to our "this" context
       // there might be an easier way to do this with .bind (if the method
       // is going to be reused)
       <div className='token string' onClick={ () => this.handleClick.call(this, locked) }>
-        { display || defaultValue || <div className='input-box'/> }
+        { display || defaultValue || <div className='input-box' style={ boxStyle }/> }
       </div>
     );
   }

@@ -23,10 +23,10 @@ export default props => {
       return token;
     } else {
       // or it could be an object specifing a token component
-      const { type, defaultValue, locked } = token;
+      const { type, defaultValue, locked, expected } = token;
       // this stores the correct component in a temporary variable to be rendered
       const CurrentToken = componentNames[type];
-      return <CurrentToken defaultValue={ defaultValue } locked={ locked } />
+      return <CurrentToken defaultValue={ defaultValue } locked={ locked } expected={ expected } />
     }
   });
 

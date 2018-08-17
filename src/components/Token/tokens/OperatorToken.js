@@ -14,11 +14,12 @@ export default class StringToken extends Token {
   }
 
   render() {
-    const { defaultValue, locked } = this.props;
+    const { defaultValue, locked, expected } = this.props;
     const { display } = this.state;
+    const boxStyle = ({ width: expected && `${expected.length}em` });
     return (
       <div className='token string' onClick={ () => this.handleClick.call(this, locked) }>
-        { display || defaultValue || <div className='input-box' /> }
+        { display || defaultValue || <div className='input-box' style={ boxStyle }/> }
       </div>
     );
   }
