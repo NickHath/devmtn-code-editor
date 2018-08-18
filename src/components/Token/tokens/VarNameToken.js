@@ -5,18 +5,23 @@ export default class VarNameToken extends Token {
   constructor() {
     super();
     this.state = {
-      // this is what will be shown in the editor
+      input: '',
       display: ''
     };
   }
 
   render() {
     const { locked, defaultValue, expected } = this.props;
-    const { display } = this.state;
+    const { input, display } = this.state;
     const boxStyle = ({ width: expected && `${expected.length}em`, borderColor: '#89BDFF'  });
     return (
-      <div className='token var-name' onClick={ () => this.handleClick.call(this, locked) }>
-        { display || defaultValue || <div className='input-box' style={ boxStyle }/>}
+      <div className='token var-name' onClick={ () => this.setState({ display: '' }) }>
+        { display || defaultValue || <input autoFocus 
+                                            onBlur={ this.validateToken.bind(this, input, expected, 'string') } 
+                                            defaultValue={ input } 
+                                            className='input-box' 
+                                            onChange={ e => this.setState({ input: e.target.value }) } 
+                                            style={ boxStyle }/>}
       </div>
     );
   }

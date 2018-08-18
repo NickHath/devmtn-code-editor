@@ -11,17 +11,25 @@ export default class Token extends Component {
     this.state = {};
   }
 
-  // validateInput(input, expected, type) {
-  //   if (typeof input !== type) { alert(`Wrong type... you used ${typeof input}`); }
-  //   if (input !== expected) { alert(`Right type, wrong input`); }
-  // }
 
-  handleClick(locked) {
-    if (locked) {
-      alert('You cannot update this token');
-    } else {
-      const input = prompt('Enter some value: ', 'Value here');
-      this.setState({ display: input });      
+  validateToken = (input, expected, type) => {
+    if (!input) { return; }
+    else if (typeof input !== type) { 
+      return alert(`Use the right data type... you used${typeof input}`);
     }
+    else if (expected && input && input !== expected) { 
+      return alert(`Wrong value... we expected: ${expected}`); 
+    }
+    // all tests have passed, so we can update our display
+    this.setState({ display: input });
   }
+
+  // updateValue(locked) {
+  //   if (locked) {
+  //     alert('You cannot update this token');
+  //   } else {
+  //     const input = prompt('Enter some value: ', 'Value here');
+  //     this.setState({ display: input });      
+  //   }
+  // }
 }

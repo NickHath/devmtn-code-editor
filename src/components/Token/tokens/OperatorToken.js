@@ -8,18 +8,23 @@ export default class StringToken extends Token {
   constructor() {
     super();
     this.state = {
-      // this is what will be shown in the editor
+      input: '',
       display: ''
     };
   }
 
   render() {
     const { defaultValue, locked, expected } = this.props;
-    const { display } = this.state;
+    const { display, input } = this.state;
     const boxStyle = ({ width: expected && `${expected.length}em`, borderColor: `#E6DB74` });
     return (
-      <div className='token operator' onClick={ () => this.handleClick.call(this, locked) }>
-        { display || defaultValue || <div className='input-box' style={ boxStyle }/> }
+      <div className='token operator' onClick={ () => this.setState({ display: '' }) }>
+        { display || defaultValue || <input autoFocus 
+                                            onBlur={ this.validateToken.bind(this, input, expected, 'string') } 
+                                            defaultValue={ input } 
+                                            className='input-box' 
+                                            onChange={ e => this.setState({ input: e.target.value }) } 
+                                            style={ boxStyle }/>}
       </div>
     );
   }

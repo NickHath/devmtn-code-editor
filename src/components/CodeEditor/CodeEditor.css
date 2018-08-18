@@ -21,9 +21,22 @@
   display: inline-block;
   padding-right: 0.5em;
 }
+textarea:focus, input:focus{
+  outline: none;
+}
+/* the user agent stylesheet was messing with the input's 
+font-size, so this was a quick fix */
+input {
+  font-size: 1em;
+  color: white;
+  text-align: center;
+}
 .input-box {
+  -webkit-appearance: none;
+  background-color: transparent;
   display: inline-block;
   height: 1em;
+  /* default width for when expected value is undefined */
   width: 6em;
   border: 2.5px solid white;
 }

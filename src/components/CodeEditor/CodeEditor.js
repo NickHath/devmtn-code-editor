@@ -33,7 +33,7 @@ export default props => {
   return (
     <div className='code-editor-wrapper'>
       <div className='lesson-json'>
-        <span style={{ color: 'red' }}>JSON used for building the editor:</span> 
+        <span style={{ color: 'red' }}>JSON used to generate this code (each object is a component):</span> 
         <br/>
         { JSON.stringify(props.tokens) };
       </div>
