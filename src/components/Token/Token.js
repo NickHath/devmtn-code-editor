@@ -11,7 +11,6 @@ export default class Token extends Component {
     this.state = {};
   }
 
-
   validateToken = (input, expected, type) => {
     if (!input) { return; }
     else if (typeof input !== type) { 
@@ -23,13 +22,4 @@ export default class Token extends Component {
     // all tests have passed, so we can update our display
     this.setState({ display: input });
   }
-
-  // updateValue(locked) {
-  //   if (locked) {
-  //     alert('You cannot update this token');
-  //   } else {
-  //     const input = prompt('Enter some value: ', 'Value here');
-  //     this.setState({ display: input });      
-  //   }
-  // }
 }

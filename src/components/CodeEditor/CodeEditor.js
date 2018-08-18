@@ -32,20 +32,28 @@ export default props => {
 
   return (
     <div className='code-editor-wrapper'>
-      <div className='lesson-json'>
-        <span style={{ color: 'red' }}>JSON used to generate this code (each object is a component):</span> 
-        <br/>
-        { JSON.stringify(props.tokens) };
-      </div>
+
+      <Link className='link' to='/'>
+        <p className='nav-button'>Home<br/>{'<'}</p>
+      </Link>
+      {
+        props.next ?
+          <Link className='link' to={ `/1/${props.next}` }>
+            <p className='nav-button'>Next<br/>{'>'}</p>
+          </Link> :
+          null
+      }
 
       <div className='editor'>
         {/* WHERE THE MAGIC HAPPENS */}
         { tokenComponents }
       </div>
 
-      <Link className='link' to='/'>
-        <p className='button'>Back<br/>{'<'}</p>
-      </Link>
+      <div className='lesson-json'>
+        <span style={{ color: 'red' }}>JSON used to generate this code (each object is a component):</span> 
+        <br/>
+        { JSON.stringify(props.tokens) };
+      </div>
     </div>
   );
 } 

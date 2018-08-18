@@ -18,6 +18,7 @@ export default class VarKeywordToken extends Token {
       <div className='token var-keyword' onClick={ () => this.setState({ display: '' }) }>
         { display || defaultValue || <input autoFocus 
                                             onBlur={ this.validateToken.bind(this, input, expected, 'string') } 
+                                            onKeyUp={ e => e.keyCode === 13 ? this.validateToken.call(this, input, expected, 'string') : null }
                                             defaultValue={ input } 
                                             className='input-box' 
                                             onChange={ e => this.setState({ input: e.target.value }) } 

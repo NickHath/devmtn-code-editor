@@ -11,6 +11,7 @@
   color: white;
 }
 .editor {
+  padding-top: 0.75em;
   color: white;
   font-size: 2em;
   height: 75vh;

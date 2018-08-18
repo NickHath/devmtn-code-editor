@@ -15,8 +15,8 @@ import lessonOne from './lessons/lessonOne.json';
 export default (
   <Switch>
     <Route exact path='/' component={ Landing } />
-    <Route path='/1/1' render={ () => <CodeEditor tokens={ lessonOne[`lesson-1.1`] } /> } />
-    <Route path='/1/2' render={ () => <CodeEditor tokens={ lessonOne[`lesson-1.2`] } /> } />
+    <Route path='/1/1' render={ () => <CodeEditor tokens={ lessonOne[`lesson-1.1`] } next={ `2` }/> } />
+    <Route path='/1/2' render={ () => <CodeEditor tokens={ lessonOne[`lesson-1.2`] } next={ `3` }/> } />
     <Route path='/1/3' render={ () => <CodeEditor tokens={ lessonOne[`lesson-1.3`] } /> } />
   </Switch>
 );
