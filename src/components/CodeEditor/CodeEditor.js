@@ -32,27 +32,34 @@ export default props => {
 
   return (
     <div className='code-editor-wrapper'>
-
-      <Link className='link' to='/'>
-        <p className='nav-button'>Home<br/>{'<'}</p>
-      </Link>
-      {
-        props.next ?
-          <Link className='link' to={ `/1/${props.next}` }>
-            <p className='nav-button'>Next<br/>{'>'}</p>
-          </Link> :
-          null
-      }
-
-      <div className='editor'>
-        {/* WHERE THE MAGIC HAPPENS */}
-        { tokenComponents }
+      <div className='nav-links'>
+        <Link className='link' to='/'>
+          <p className='nav-button'>Home<br/>{'<'}</p>
+        </Link>
+        {
+          props.next ?
+            <Link className='link' to={ `/1/${props.next}` }>
+              <p className='nav-button'>Next<br/>{'>'}</p>
+            </Link> :
+            null
+        }
       </div>
-
-      <div className='lesson-json'>
-        <span style={{ color: 'red' }}>JSON used to generate this code (each object is a component):</span> 
-        <br/>
-        { JSON.stringify(props.tokens) };
+      <div className='editor'>
+        <div className='instructions-code'>
+          {/* WHERE THE MAGIC HAPPENS */}
+          <h1 className='title'>{ props.title }</h1>
+          <p className='description'>{ props.description }</p>
+          { tokenComponents }
+        </div>
+        <div className='lesson-json'>
+          <span style={{ color: 'red' }}>JSON used to generate this code (each object is a component):</span> 
+          <br/>
+          { JSON.stringify(props.tokens) };
+          <br/>
+          <span style={{ color: 'red' }}>Number of components generated:</span> 
+          <br/>
+          { props.tokens.filter(token => typeof token !== 'string').length }
+        </div>
       </div>
     </div>
   );

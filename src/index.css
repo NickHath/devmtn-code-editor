@@ -1,6 +1,13 @@
+html, body, #root {
+  width: 100%;
+  height: 100vh;
+}
 .app {
   font-family: sans-serif;
   box-sizing: border-box;
+  background-color: #676767;
+  width: 100%;
+  height: 100%;
 }
 .button, .nav-button {
   font-size: 1.25em;
@@ -12,15 +19,16 @@
 }
 .button {
   border-radius: 3px;
-  padding: 1em;
-  margin: 0.5em 0 0 0.5em;
+  margin: 0 0 0.5em 0.5em;
   width: 150px;
-  height: 50px;
+  height: 75px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav-button {
-  border-top: 1px solid white;
-  border-right: 1px solid white;
+  margin-right: 0.1em;
   display: inline-block;
   width: 100px;
 }

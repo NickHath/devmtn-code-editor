@@ -1,23 +1,57 @@
 {
-  "lesson-1.1": [
-    { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
-    { "type": "VarName", "defaultValue": "", "locked": false, "expected": "greeting" },
-    ";"
-  ],
-  "lesson-1.2": [
-    { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
-    { "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
-    { "type": "Operator", "defaultValue": "", "locked": false, "expected": "=" },
-    { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
-    ";"
-  ],
-  "lesson-1.3": [
-    { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
-    { "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
-    { "type": "Operator", "defaultValue": "=", "locked": true, "expected": "=" },
-    { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
-    { "type": "Operator", "defaultValue": "+", "locked": true, "expected": "+" },
-    { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
-    ";"
-  ]
+  "lesson-1.1": {
+    "title": "Declare a variable",
+    "description": "We can use the var keyword in JavaScript to assign a name somewhere in memory. Below, create a variable called greeting by typing into the blue input box.",
+    "tokens": [
+      { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
+      { "type": "VarName", "defaultValue": "", "locked": false, "expected": "greeting" },
+      ";"
+    ]
+  },
+  "lesson-1.2": {
+    "title": "Assign a value to a variable",
+    "description": "Words are represented in memory as a type of data  called \"strings\". To create a string, we surround a word with quotes. We can also store strings in our variables using the assignment operator (= sign). Store whatever string you want into our greeting variable.",
+    "tokens": [
+      { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
+      { "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
+      { "type": "Operator", "defaultValue": "=", "locked": true, "expected": "=" },
+      { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
+      ";"
+    ]
+  },
+  "lesson-1.3": {
+    "title": "Fill in the blanks",
+    "description": "Using what you've learned, fill in the missing pieces of our code. You should end up with a program that stores a string in a variable.",
+    "tokens": [
+      { "type": "VarKeyword", "defaultValue": "", "locked": false, "expected": "var" },
+      { "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
+      { "type": "Operator", "defaultValue": "", "locked": false, "expected": "=" },
+      { "type": "String", "defaultValue": "hello", "locked": true, "expected": "hello" },
+      ";"
+    ]
+  },
+  "lesson-1.4": {
+    "title": "Add two strings together",
+    "description": "In JavaScript, we can add two strings together by using the addition operator (+ sign). Fill in two strings you want to add together in the boxes below.",
+    "tokens": [
+      { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
+      { "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
+      { "type": "Operator", "defaultValue": "=", "locked": true, "expected": "=" },
+      { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
+      { "type": "Operator", "defaultValue": "+", "locked": true, "expected": "+" },
+      { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
+      ";"
+    ]
+  },
+  "lesson-1.5": {
+    "title": "Test your knowledge",
+    "description": "Using what you've learned so far, create a new variable and assign it the value of any string you want.",
+    "tokens": [
+      { "type": "VarKeyword", "defaultValue": "", "locked": false, "expected": "var" },
+      { "type": "VarName", "defaultValue": "", "locked": false, "expected": "" },
+      { "type": "Operator", "defaultValue": "", "locked": false, "expected": "=" },
+      { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
+      ";"
+    ]
+  }
 }

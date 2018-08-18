@@ -15,8 +15,39 @@ import lessonOne from './lessons/lessonOne.json';
 export default (
   <Switch>
     <Route exact path='/' component={ Landing } />
-    <Route path='/1/1' render={ () => <CodeEditor tokens={ lessonOne[`lesson-1.1`] } next={ `2` }/> } />
-    <Route path='/1/2' render={ () => <CodeEditor tokens={ lessonOne[`lesson-1.2`] } next={ `3` }/> } />
-    <Route path='/1/3' render={ () => <CodeEditor tokens={ lessonOne[`lesson-1.3`] } /> } />
+    <Route path='/1/1' render={ () =>  ( 
+      <CodeEditor 
+        title={ lessonOne['lesson-1.1']['title'] }
+        description={ lessonOne['lesson-1.1']['description'] }
+        tokens={ lessonOne['lesson-1.1']['tokens'] } 
+        next={ '2' }/> 
+    ) } />
+    <Route path='/1/2' render={ () =>  ( 
+      <CodeEditor 
+        title={ lessonOne['lesson-1.2']['title'] } 
+        description={ lessonOne['lesson-1.2']['description'] } 
+        tokens={ lessonOne['lesson-1.2']['tokens'] } 
+        next={ '3' }/> 
+    ) } />
+    <Route path='/1/3' render={ () =>  ( 
+      <CodeEditor 
+        title={ lessonOne['lesson-1.3']['title'] } 
+        description={ lessonOne['lesson-1.3']['description'] } 
+        tokens={ lessonOne['lesson-1.3']['tokens'] } 
+        next={ '4' }/> 
+    ) } />
+    <Route path='/1/4' render={ () =>  ( 
+      <CodeEditor 
+        tokens={ lessonOne['lesson-1.4']['tokens'] } 
+        tokens={ lessonOne['lesson-1.4']['tokens'] } 
+        tokens={ lessonOne['lesson-1.4']['tokens'] } 
+        next={ '5' }/> 
+    ) } />
+    <Route path='/1/5' render={ () =>  ( 
+      <CodeEditor 
+        title={ lessonOne['lesson-1.5']['title'] } 
+        description={ lessonOne['lesson-1.5']['description'] }  
+        tokens={ lessonOne['lesson-1.5']['tokens'] } />  
+    ) } />
   </Switch>
 );
