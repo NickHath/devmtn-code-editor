@@ -38,8 +38,8 @@ export default (
     ) } />
     <Route path='/1/4' render={ () =>  ( 
       <CodeEditor 
-        tokens={ lessonOne['lesson-1.4']['tokens'] } 
-        tokens={ lessonOne['lesson-1.4']['tokens'] } 
+        title={ lessonOne['lesson-1.4']['title'] } 
+        description={ lessonOne['lesson-1.4']['description'] } 
         tokens={ lessonOne['lesson-1.4']['tokens'] } 
         next={ '5' }/> 
     ) } />
