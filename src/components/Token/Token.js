@@ -13,7 +13,10 @@ export default class Token extends Component {
 
   validateToken = (input, expected, type) => {
     if (!input) { return; }
-    else if (typeof input !== type) { 
+    
+    // get rid of whitespace around input
+    input = input.trim();
+    if (typeof input !== type) { 
       return alert(`Use the right data type... you used${typeof input}`);
     }
     else if (expected && input && input !== expected) { 
