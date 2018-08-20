@@ -23,9 +23,7 @@ class App extends Component {
     return (
       <div className="animation-workspace">
         <Helper />
-        <div className="animation-graph">
-          <Graph currentVal={this.state.currentVal} data={arrOfVar} />
-        </div>
+        <Graph currentVal={this.state.currentVal} data={arrOfVar} />
         <div className="animation-highlights">
           {arrOfVar.map((val, i) => {
             return (

@@ -44,16 +44,19 @@ export default class CodeEditor extends React.Component {
         return (
           <Motion
             defaultStyle={{
-              x: 0
+              x: 0,
+              color: 0
             }}
             style={{
               x: this.state.animationTrig
                 ? spring(10, { stiffness: 200, damping: 1 })
-                : spring(0, { stiffness: 150, damping: 5 })
+                : spring(0, { stiffness: 150, damping: 5 }),
+              color: this.state.animationTrig
+                ? spring(1, { stiffness: 60, damping: 15 })
+                : spring(0, { stiffness: 60, damping: 15 })
             }}
           >
             {mot => {
-              console.log("mot", mot);
               return (
                 <CurrentToken
                   defaultValue={defaultValue}

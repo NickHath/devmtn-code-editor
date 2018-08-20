@@ -1,4 +1,5 @@
 import React from "react";
+import { Motion, spring } from "react-motion";
 
 export default class Highlights extends React.Component {
   constructor() {
@@ -20,20 +21,30 @@ export default class Highlights extends React.Component {
 
   render() {
     return (
-      <div
-        style={{
-          width: "100%",
-          height: "30px",
-          backgroundColor: "pink",
-          boxShadow: `${this.state.pop}px ${this.state.pop}px ${
-            this.state.pop
-          }px black`
-        }}
-        onMouseEnter={() => this.enter()}
-        onMouseLeave={() => this.leave()}
+      <Motion
+        defaultStyle={{ x: 300 }}
+        style={{ x: spring(0, { stiffness: 90, damping: 11 }) }}
       >
-        Variable Name: {this.props.name} // Data Type: {this.props.type}
-      </div>
+        {mot => {
+          return (
+            <div
+              style={{
+                width: "100%",
+                height: "30px",
+                backgroundColor: "pink",
+                boxShadow: `${this.state.pop}px ${this.state.pop}px ${
+                  this.state.pop
+                }px black`,
+                transform: `translateX(${mot.x}px)`
+              }}
+              onMouseEnter={() => this.enter()}
+              onMouseLeave={() => this.leave()}
+            >
+              Variable Name: {this.props.name} // Data Type: {this.props.type}
+            </div>
+          );
+        }}
+      </Motion>
     );
   }
 }

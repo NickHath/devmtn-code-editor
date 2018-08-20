@@ -36,7 +36,7 @@ class VarNameToken extends Token {
     //   borderColor: "#89BDFF",
     //   transform: "translateX(0px)"
     // };
-
+    console.log(this.props.mot);
     return (
       <div
         className="token var-name"
@@ -57,7 +57,8 @@ class VarNameToken extends Token {
               onChange={e => this.setState({ input: e.target.value })}
               style={{
                 width: expected && `${expected.length}em`,
-                borderColor: "#89BDFF",
+                borderColor: mot.color !== 0 ? "red" : "#89BDFF",
+                color: mot.color !== 0 ? "red" : "white",
                 transform: `translateX(${mot.x}px)`
               }}
             />
