@@ -17,16 +17,16 @@ const componentNames = {
 };
 
 export default props => {
-  const tokenComponents = props.tokens.map(token => {
+  const tokenComponents = props.tokens.map(token=> {
     // the .json might include a string for formatting, like '{\n'
     if (typeof token === 'string') {
       return token;
     } else {
       // or it could be an object specifing a token component
-      const { type, defaultValue, locked, expected } = token;
+      const { id, type, defaultValue, locked, expected } = token;
       // this stores the correct component in a temporary variable to be rendered
       const CurrentToken = componentNames[type];
-      return <CurrentToken defaultValue={ defaultValue } locked={ locked } expected={ expected } />
+      return <CurrentToken key={ id } defaultValue={ defaultValue } locked={ locked } expected={ expected } />
     }
   });
 
