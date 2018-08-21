@@ -105,7 +105,7 @@ export default class CodeEditor extends React.Component {
                 JSON generating this code:
               </span>
               <br />
-              {props.tokens.map(el => {
+              {this.props.tokens.map(el => {
                 return el.id ? (
                   <div>
                     <p>

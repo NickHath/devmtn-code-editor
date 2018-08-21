@@ -9,6 +9,10 @@ export default class Helper extends React.Component {
     };
   }
 
+  componentDidMount() {
+    console.log("hello");
+  }
+
   render() {
     return (
       <div style={{ position: "fixed", bottom: 10, right: 150, zIndex: 3 }}>
