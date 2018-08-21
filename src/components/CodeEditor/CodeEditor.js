@@ -105,7 +105,21 @@ export default class CodeEditor extends React.Component {
                 JSON generating this code:
               </span>
               <br />
-              {JSON.stringify(this.props.tokens)};<br />
+              {props.tokens.map(el => {
+                return el.id ? (
+                  <div>
+                    <p>
+                      id: {el.id}, type: {el.type}, locked: {el.locked},
+                      defaultValue: {el.defaultValue}
+                    </p>
+                  </div>
+                ) : (
+                  <div>
+                    <p>punctuation: {el.defaultValue}</p>
+                  </div>
+                );
+              })}
+              ;<br />
               <span style={{ textDecoration: "underline" }}>
                 Number of components generated:
               </span>
