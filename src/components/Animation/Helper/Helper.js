@@ -35,7 +35,7 @@ export default class Helper extends React.Component {
                     height: "100px",
                     // backgroundColor: "red",
                     position: "fixed",
-                    bottom: 200,
+                    bottom: 180,
                     // zIndex: 3,
                     display: "flex",
                     flexDirection: "column",
@@ -49,10 +49,8 @@ export default class Helper extends React.Component {
                       width: "15px",
                       backgroundColor: "red"
                     }}
-                  >
-                    ball
-                  </div>
-                  <div className="zigzag">hands</div>
+                  />
+                  <div className="zigzag" />
                 </div>
                 <div
                   className="animation-head"
