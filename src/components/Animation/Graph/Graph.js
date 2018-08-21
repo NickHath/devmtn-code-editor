@@ -21,18 +21,12 @@ class Graph extends React.Component {
         this.props.arrOfVar.length
       );
     }
+
+    const { highlightVal } = this.props;
     return (
-      <div
-        className="animation-graph"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "33.3% 33.3% 33.3%",
-          gridTemplateRows: "33.3% 33.3% 33.3%",
-          backgroundColor: "pink",
-          margin: 0
-        }}
-      >
+      <div className="animation-graph">
         {gridArray.map((val, i) => {
+          const inputHighlighted = highlightVal.input && (highlightVal.input === val.input);
           return (
             <Motion
               defaultStyle={{ x: 10, opacity: 0 }}
@@ -46,22 +40,15 @@ class Graph extends React.Component {
               {mot => {
                 return (
                   <div
+                    className="memory-location"
                     key={i}
                     style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      border: "1px solid black",
-                      padding: "2px",
-                      backgroundColor: this.props.highlightVal.input
-                        ? this.props.highlightVal.input === val.input
-                          ? "blue"
-                          : "pink"
-                        : "pink"
+                      color: inputHighlighted ? "#89BDFF" : "#00E676",
+                      border: inputHighlighted ? "1px solid #89BDFF" : "1px solid #00E676",
+                      backgroundColor: inputHighlighted ? "rgba(137, 189, 255, 0.35)" : "rgba(0, 230, 118, 0.35)",
                     }}
                   >
-                    <div>Memory Location: {i + 1100}</div>
+                    <div>({i + 1100})</div>
                     <div
                       style={{
                         transform: `translateX(${mot.x}px)`,

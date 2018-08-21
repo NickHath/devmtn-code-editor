@@ -92,8 +92,8 @@ export default class CodeEditor extends React.Component {
             </Link>
           ) : null}
         </div>
-        <div className="editor">
-          <div>
+        <div className="editor-container">
+          <div className="editor">
             <div className="instructions-code">
               {/* WHERE THE MAGIC HAPPENS */}
               <h1 className="title">{this.props.title}</h1>
@@ -101,12 +101,12 @@ export default class CodeEditor extends React.Component {
               {tokenComponents}
             </div>
             <div className="lesson-json">
-              <span style={{ color: "red" }}>
-                JSON used to generate this code (each object is a component):
+              <span style={{ textDecoration: "underline" }}>
+                JSON generating this code:
               </span>
               <br />
               {JSON.stringify(this.props.tokens)};<br />
-              <span style={{ color: "red" }}>
+              <span style={{ textDecoration: "underline" }}>
                 Number of components generated:
               </span>
               <br />

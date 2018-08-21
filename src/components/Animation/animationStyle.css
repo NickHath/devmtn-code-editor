@@ -1,27 +1,57 @@
 .animation-workspace {
   height: 90vh;
-  width: 100%;
-  background-color: lightgrey;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-right: 1em;
 }
 
 .animation-graph {
-  height: 70vh;
+  height: 100%;
   width: 100%;
-  background-color: purple;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: 60px;
+  grid-gap: 15px;
+  color: #00E676;
+  margin-bottom: 1em;
+
+  /* don't know why we need to override the bg color here */
+  background-color:#676767;
+}
+
+.memory-location {
+  font-size: 0.85em;
+  border: 1px solid #00E676;
+  text-align: center;
+  padding-top: 0.5em;
+  line-height: 1.15em;
 }
 
 .animation-highlights {
-  height: 30vh;
+  height: 40%;
   width: 100%;
-  background-color: green;
+  /* same here, need to override a light gray color... */
+  background-color: #424242;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   overflow: hidden;
+}
+
+.highlight-element {
+  height: 30px;
+  background-color: #424242;
+  padding: 0.35em 0 0.35em 1em;
+}
+
+/* Need to make this dynamic */
+.highlight-element:hover {
+  border: 1px solid #89BDFF;
+  background-color: rgba(137, 189, 255, 0.35);
 }
 
 .animation-monkey {
