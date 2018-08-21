@@ -40,7 +40,7 @@ export default class Highlights extends React.Component {
               onMouseEnter={() => this.enter(this.props.data)}
               onMouseLeave={() => this.leave(this.props.data)}
             >
-              Variable Name: {this.props.data.input} // Data Type:{" "}
+              Variable Name: {this.props.data.input} -- Data Type:{" "}
               {this.props.data.type}
             </div>
           );

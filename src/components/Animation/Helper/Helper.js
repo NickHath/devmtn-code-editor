@@ -23,10 +23,9 @@ export default class Helper extends React.Component {
             zIndex: 4
           }}
         >
-          <div className="animation-hands">hands</div>
-          <div className="animation-hands">hands</div>
+          <div className="animation-hands" />
+          <div className="animation-hands" />
         </div>
-
         <Motion
           defaultStyle={{ head: 200, body: 200, hands: 0 }}
           style={{
@@ -50,15 +49,74 @@ export default class Helper extends React.Component {
                     transform: `translateY(${mot.head}px)`
                   }}
                 >
-                  Head
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      padding: "2px"
+                    }}
+                  >
+                    <div>
+                      <div
+                        style={{
+                          backgroundColor: "black",
+                          width: "50px",
+                          height: "10px",
+                          margin: "1px",
+                          transform: "rotate(-10deg)"
+                        }}
+                      />
+                      <div
+                        style={{
+                          backgroundColor: "blue",
+                          width: "50px",
+                          height: "50px",
+                          margin: "1px",
+                          borderRadius: "20px 20px 0 0"
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <div
+                        style={{
+                          backgroundColor: "black",
+                          width: "50px",
+                          height: "10px",
+                          margin: "1px"
+                        }}
+                      />
+                      <div
+                        style={{
+                          backgroundColor: "blue",
+                          width: "50px",
+                          height: "50px",
+                          margin: "1px",
+                          borderRadius: "20px 20px 0 0"
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      width: "100px",
+                      height: "10px",
+                      backgroundColor: "black"
+                    }}
+                  />
                 </div>
                 <div
                   className="animation-body"
                   style={{
-                    transform: `translateY(${mot.body}px)`
+                    transform: `translateY(${mot.body}px)`,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    alignItems: "center"
                   }}
                 >
-                  Body
+                  <div className="tie bow" />
+                  <div className="tail" />
                 </div>
               </div>
             );
