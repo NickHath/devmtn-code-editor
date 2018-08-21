@@ -12,20 +12,6 @@ export default class Helper extends React.Component {
   render() {
     return (
       <div style={{ position: "fixed", bottom: 10, right: 150, zIndex: 3 }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            position: "fixed",
-            bottom: 10,
-            width: "50px",
-            height: "auto",
-            zIndex: 4
-          }}
-        >
-          <div className="animation-hands" />
-          <div className="animation-hands" />
-        </div>
         <Motion
           defaultStyle={{ head: 200, body: 200, hands: 0 }}
           style={{
@@ -44,6 +30,29 @@ export default class Helper extends React.Component {
                 onClick={() => this.setState({ clicked: !this.state.clicked })}
               >
                 <div
+                  style={{
+                    width: "100%",
+                    height: "100px",
+                    // backgroundColor: "red",
+                    position: "fixed",
+                    bottom: 180,
+                    // zIndex: 3,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center"
+                  }}
+                >
+                  <div
+                    style={{
+                      height: "15px",
+                      width: "15px",
+                      backgroundColor: "red"
+                    }}
+                  />
+                  <div className="zigzag" />
+                </div>
+                <div
                   className="animation-head"
                   style={{
                     transform: `translateY(${mot.head}px)`
@@ -59,51 +68,19 @@ export default class Helper extends React.Component {
                   >
                     <div>
                       <div
+                        className="animation-brows"
                         style={{
-                          backgroundColor: "black",
-                          width: "50px",
-                          height: "10px",
-                          margin: "1px",
                           transform: "rotate(-10deg)"
                         }}
                       />
-                      <div
-                        style={{
-                          backgroundColor: "blue",
-                          width: "50px",
-                          height: "50px",
-                          margin: "1px",
-                          borderRadius: "20px 20px 0 0"
-                        }}
-                      />
+                      <div className="animation-eyes" />
                     </div>
                     <div>
-                      <div
-                        style={{
-                          backgroundColor: "black",
-                          width: "50px",
-                          height: "10px",
-                          margin: "1px"
-                        }}
-                      />
-                      <div
-                        style={{
-                          backgroundColor: "blue",
-                          width: "50px",
-                          height: "50px",
-                          margin: "1px",
-                          borderRadius: "20px 20px 0 0"
-                        }}
-                      />
+                      <div className="animation-brows" />
+                      <div className="animation-eyes" />
                     </div>
                   </div>
-                  <div
-                    style={{
-                      width: "100px",
-                      height: "10px",
-                      backgroundColor: "black"
-                    }}
-                  />
+                  <div className="animation-mouth" />
                 </div>
                 <div
                   className="animation-body"
