@@ -3,8 +3,8 @@
     "title": "Declare a variable",
     "description": "We can use the var keyword in JavaScript to assign a name somewhere in memory. Below, create a variable called greeting by typing into the blue input box.",
     "tokens": [
-      { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
-      { "type": "VarName", "defaultValue": "", "locked": false, "expected": "greeting" },
+      { "id": 1, "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
+      { "id": 2, "type": "VarName", "defaultValue": "", "locked": false, "expected": "greeting" },
       ";"
     ]
   },
@@ -12,10 +12,10 @@
     "title": "Assign a value to a variable",
     "description": "Words are represented in memory as a type of data  called \"strings\". To create a string, we surround a word with quotes. We can also store strings in our variables using the assignment operator (= sign). Store whatever string you want into our greeting variable.",
     "tokens": [
-      { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
-      { "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
-      { "type": "Operator", "defaultValue": "=", "locked": true, "expected": "=" },
-      { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
+      { "id": 3, "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
+      { "id": 4, "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
+      { "id": 5, "type": "Operator", "defaultValue": "=", "locked": true, "expected": "=" },
+      { "id": 6, "type": "String", "defaultValue": "", "locked": false, "expected": "" },
       ";"
     ]
   },
@@ -23,10 +23,10 @@
     "title": "Fill in the blanks",
     "description": "Using what you've learned, fill in the missing pieces of our code. You should end up with a program that stores a string in a variable.",
     "tokens": [
-      { "type": "VarKeyword", "defaultValue": "", "locked": false, "expected": "var" },
-      { "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
-      { "type": "Operator", "defaultValue": "", "locked": false, "expected": "=" },
-      { "type": "String", "defaultValue": "hello", "locked": true, "expected": "hello" },
+      { "id": 7, "type": "VarKeyword", "defaultValue": "", "locked": false, "expected": "var" },
+      { "id": 8, "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
+      { "id": 9, "type": "Operator", "defaultValue": "", "locked": false, "expected": "=" },
+      { "id": 10, "type": "String", "defaultValue": "hello", "locked": true, "expected": "hello" },
       ";"
     ]
   },
@@ -34,12 +34,12 @@
     "title": "Add two strings together",
     "description": "In JavaScript, we can add two strings together by using the addition operator (+ sign). Fill in two strings you want to add together in the boxes below.",
     "tokens": [
-      { "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
-      { "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
-      { "type": "Operator", "defaultValue": "=", "locked": true, "expected": "=" },
-      { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
-      { "type": "Operator", "defaultValue": "+", "locked": true, "expected": "+" },
-      { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
+      { "id": 11, "type": "VarKeyword", "defaultValue": "var", "locked": true, "expected": "var" },
+      { "id": 12, "type": "VarName", "defaultValue": "greeting", "locked": true, "expected": "greeting" },
+      { "id": 13, "type": "Operator", "defaultValue": "=", "locked": true, "expected": "=" },
+      { "id": 14, "type": "String", "defaultValue": "", "locked": false, "expected": "" },
+      { "id": 15, "type": "Operator", "defaultValue": "+", "locked": true, "expected": "+" },
+      { "id": 16, "type": "String", "defaultValue": "", "locked": false, "expected": "" },
       ";"
     ]
   },
@@ -47,10 +47,10 @@
     "title": "Test your knowledge",
     "description": "Using what you've learned so far, create a new variable and assign it the value of any string you want.",
     "tokens": [
-      { "type": "VarKeyword", "defaultValue": "", "locked": false, "expected": "var" },
-      { "type": "VarName", "defaultValue": "", "locked": false, "expected": "" },
-      { "type": "Operator", "defaultValue": "", "locked": false, "expected": "=" },
-      { "type": "String", "defaultValue": "", "locked": false, "expected": "" },
+      { "id": 17, "type": "VarKeyword", "defaultValue": "", "locked": false, "expected": "var" },
+      { "id": 18, "type": "VarName", "defaultValue": "", "locked": false, "expected": "" },
+      { "id": 19, "type": "Operator", "defaultValue": "", "locked": false, "expected": "=" },
+      { "id": 20, "type": "String", "defaultValue": "", "locked": false, "expected": "" },
       ";"
     ]
   }
