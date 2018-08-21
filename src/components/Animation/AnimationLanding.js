@@ -14,24 +14,25 @@ class App extends Component {
     this.hoverHighlight = this.hoverHighlight.bind(this);
   }
 
-  hoverHighlight(val) {
-    this.setState({ currentVal: val });
+  hoverHighlight(val, action) {
+    action === "enter"
+      ? this.setState({ currentVal: val })
+      : this.setState({ currentVal: "" });
   }
 
   render() {
     const arrOfVar = this.props.arrOfVar;
     return (
       <div className="animation-workspace">
-        <Helper />
-        <Graph currentVal={this.state.currentVal} data={arrOfVar} />
+        <Helper style={{ zIndex: 3 }} />
+        <Graph highlightVal={this.state.currentVal} data={arrOfVar} />
         <div className="animation-highlights">
           {arrOfVar.map((val, i) => {
             return (
               <Highlights
                 key={i}
                 hoverHighlight={this.hoverHighlight}
-                name={val.input}
-                type={val.dataType}
+                data={val}
               />
             );
           })}

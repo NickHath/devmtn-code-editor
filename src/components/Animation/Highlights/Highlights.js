@@ -9,20 +9,20 @@ export default class Highlights extends React.Component {
     };
   }
 
-  enter() {
-    this.setState({ pop: 5 });
-    this.props.hoverHighlight(this.props.name);
+  enter(val) {
+    this.setState({ pop: 3 });
+    this.props.hoverHighlight(val, "enter");
   }
 
-  leave() {
+  leave(val) {
     this.setState({ pop: 0 });
-    this.props.hoverHighlight(this.props.name);
+    this.props.hoverHighlight(val, "leave");
   }
 
   render() {
     return (
       <Motion
-        defaultStyle={{ x: 300 }}
+        defaultStyle={{ x: 300, zIndex: 0 }}
         style={{ x: spring(0, { stiffness: 90, damping: 11 }) }}
       >
         {mot => {
@@ -37,10 +37,11 @@ export default class Highlights extends React.Component {
                 }px black`,
                 transform: `translateX(${mot.x}px)`
               }}
-              onMouseEnter={() => this.enter()}
-              onMouseLeave={() => this.leave()}
+              onMouseEnter={() => this.enter(this.props.data)}
+              onMouseLeave={() => this.leave(this.props.data)}
             >
-              Variable Name: {this.props.name} // Data Type: {this.props.type}
+              Variable Name: {this.props.data.input} // Data Type:{" "}
+              {this.props.data.type}
             </div>
           );
         }}

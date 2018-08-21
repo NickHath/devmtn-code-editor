@@ -52,7 +52,13 @@ class Graph extends React.Component {
                       flexDirection: "column",
                       justifyContent: "space-between",
                       alignItems: "center",
-                      border: "1px solid black"
+                      border: "1px solid black",
+                      padding: "2px",
+                      backgroundColor: this.props.highlightVal.input
+                        ? this.props.highlightVal.input === val.input
+                          ? "blue"
+                          : "pink"
+                        : "pink"
                     }}
                   >
                     <div>Memory Location: {i + 1100}</div>

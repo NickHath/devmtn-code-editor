@@ -11,7 +11,7 @@ export default class Helper extends React.Component {
 
   render() {
     return (
-      <div style={{ position: "fixed", bottom: 10, right: 150 }}>
+      <div style={{ position: "fixed", bottom: 10, right: 150, zIndex: 3 }}>
         <div
           style={{
             display: "flex",
@@ -20,7 +20,7 @@ export default class Helper extends React.Component {
             bottom: 10,
             width: "50px",
             height: "auto",
-            zIndex: 3
+            zIndex: 4
           }}
         >
           <div className="animation-hands">hands</div>
@@ -54,7 +54,9 @@ export default class Helper extends React.Component {
                 </div>
                 <div
                   className="animation-body"
-                  style={{ transform: `translateY(${mot.body}px)` }}
+                  style={{
+                    transform: `translateY(${mot.body}px)`
+                  }}
                 >
                   Body
                 </div>
